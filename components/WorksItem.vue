@@ -1,7 +1,7 @@
 <template>
   <li>
     <div>
-      <p><NuxtLink :to="`/work/${item.id}/`">permalink</NuxtLink></p>
+      <p><NuxtLink :to="`/work/${item.slug}/`">permalink</NuxtLink></p>
       <pre>{{item.id}}</pre>
       <pre>{{item.slug}}</pre>
       <pre>{{item.title.rendered}}</pre>

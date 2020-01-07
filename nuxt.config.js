@@ -4,7 +4,7 @@ const axios = require('axios')
 const apiURL = 'https://atelier24b.yuheijotaki.com/wp-json/wp/v2/'
 
 export default {
-  // mode: 'spa',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
