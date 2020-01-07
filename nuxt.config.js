@@ -1,6 +1,10 @@
+// Nuxt.jsでWordPressの記事を取得する
+// ref: https://www.expexp.jp/nuxt-js-and-wp-netlify/
+const axios = require('axios')
+const apiURL = 'https://atelier24b.yuheijotaki.com/wp-json/wp/v2/'
 
 export default {
-  mode: 'spa',
+  // mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -48,5 +52,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  // WordPress REST API から情報を取得する
+  axios: {
+    baseURL: apiURL
   }
 }
