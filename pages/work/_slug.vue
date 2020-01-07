@@ -1,20 +1,20 @@
 <template>
   <div>
     <p><NuxtLink :to="`/`">index</NuxtLink></p>
-    <pre>{{post.slug}}</pre>
-    <pre>{{post.title.rendered}}</pre>
-    <pre>{{post.category_name}}</pre>
-    <pre>{{post.images.full}}</pre>
-    <pre>{{post.acf.post_url}}</pre>
-    <pre>{{post.acf.post_color_letter}}</pre>
-    <pre>{{post.acf.post_color_bg}}</pre>
+    <WorksSingle
+      :post="post"
+    />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import WorksSingle from '~/components/WorksSingle.vue'
 
 export default {
+  components: {
+    WorksSingle
+  },
   data () {
     return {
       post: {}
