@@ -8,7 +8,7 @@
 *,html {
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
 }
 body {
   margin: 20px;

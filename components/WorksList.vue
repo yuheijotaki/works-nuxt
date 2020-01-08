@@ -1,7 +1,7 @@
 <template>
   <ul>
     <WorksItem
-      v-for="(post,index) in posts"
+      v-for="(post,index) in filterWorks"
       :item="post"
       :key="index"
     />
@@ -17,6 +17,12 @@ export default {
   components: {
     WorksItem
   },
+  props:{
+    'filterCategory': {
+      type: String,
+      default: 'All'
+    }
+  },
   data () {
     return {
       posts: []
@@ -30,6 +36,22 @@ export default {
     .catch( error => {
       console.log(error)
     })
+  },
+  computed: {
+    filterWorks: function() {
+      const posts = this.posts
+      const filterCategory = this.filterCategory
+      if ( filterCategory !== 'All' ) {
+        return this.posts.filter( function( post ) {
+          if ( post.category_name.indexOf(filterCategory) >= 0 ) {
+            return post
+          }
+        })
+      } else {
+        // 初期表示 or `All` を選択した場合
+        return this.posts
+      }
+    }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p><NuxtLink :to="`/`">index</NuxtLink></p>
+    <logo />
     <WorksSingle
       :post="post"
     />
@@ -8,11 +8,13 @@
 </template>
 
 <script>
-import axios from 'axios'
+import Logo from '~/components/Logo.vue'
 import WorksSingle from '~/components/WorksSingle.vue'
+import axios from 'axios'
 
 export default {
   components: {
+    Logo,
     WorksSingle
   },
   data () {

@@ -2,9 +2,11 @@
   <div>
     <logo />
     <Search
-      @categoryClicked="selectedCategory"
+      @clickedCategory="selectedCategory"
     />
-    <WorksList/>
+    <WorksList
+      :filterCategory="propsCategory"
+    />
   </div>
 </template>
 
@@ -19,9 +21,20 @@ export default {
     Search,
     WorksList
   },
+  data () {
+    return {
+      category: 'All'
+    }
+  },
   methods: {
     selectedCategory (category) {
-      console.log(category)
+      // console.log(category)
+      this.category = category
+    }
+  },
+  computed: {
+    propsCategory: function() {
+      return this.category
     }
   }
 }

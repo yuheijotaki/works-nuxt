@@ -1,10 +1,12 @@
 <template>
   <div>
-    <p>Search</p>
+    <p>Filter:</p>
     <ul>
-      <li><a href="#" @click="categoryNaviClick('Front-end')">Front-end</a></li>
-      <li><a href="#" @click="categoryNaviClick('WordPress')">WordPress</a></li>
-      <li><a href="#" @click="categoryNaviClick('Web Design')">Web Design</a></li>
+      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('All')">All</a></li>
+      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('Front-end')">Front-end</a></li>
+      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('WordPress')">WordPress</a></li>
+      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('Web Design')">Web Design</a></li>
+      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('Tumblr')">Tumblr</a></li>
     </ul>
   </div>
 </template>
@@ -16,8 +18,8 @@ export default {
     }
   },
   methods: {
-    categoryNaviClick(category) {
-      this.$emit('categoryClicked',category);
+    clickedCategoryEvent(category) {
+      this.$emit('clickedCategory',category);
     }
   }
 }
