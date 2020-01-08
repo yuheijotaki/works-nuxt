@@ -6,6 +6,11 @@ const apiURL = 'https://atelier24b.yuheijotaki.com/wp-json/wp/v2/'
 export default {
   mode: 'spa',
   /*
+  ** 作業ディレクトリを src/ 以下にまとめる
+  ** ref: https://ja.nuxtjs.org/api/configuration-srcdir/
+  */
+  srcDir: 'src/',
+  /*
   ** Headers of the page
   */
   head: {
