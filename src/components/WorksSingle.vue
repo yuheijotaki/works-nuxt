@@ -9,14 +9,16 @@
     ul
       SingleCapturePC(
         v-for="(img,index) in capturePC"
-        :image="img"
         :key="index"
+        :title="post.title.rendered"
+        :image="img"
       )
     ul
       SingleCaptureSP(
         v-for="(img,index) in captureSP"
-        :image="img"
         :key="index"
+        :title="post.title.rendered"
+        :image="img"
       )
 </template>
 

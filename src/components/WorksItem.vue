@@ -9,7 +9,10 @@
       pre {{item.slug}}
       pre {{item.title.rendered}}
       pre {{item.category_name}}
-      img(:src="item.images.full" alt="")
+      img(
+        :src="item.images.full"
+        :alt="item.title.rendered"
+      )
       pre {{item.acf.post_color_letter}}
       pre {{item.acf.post_color_bg}}
 </template>
@@ -27,6 +30,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+li {
+  width: 25%;
+  border: #000 1px solid;
+  box-sizing: border-box;
+}
 img {
   width: 15px;
   height: auto;

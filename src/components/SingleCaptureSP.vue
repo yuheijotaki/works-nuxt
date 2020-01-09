@@ -1,12 +1,19 @@
 <template lang="pug">
   li
-    img(:src="image.url" alt="")
+    img(
+      :src="image.url"
+      :alt="title"
+    )
 </template>
 
 <script>
 export default {
   name: 'SingleCaptureSP',
   props:{
+    'title': {
+      type: String,
+      default: ''
+    },
     'image': {
       type: Object,
       default: ''

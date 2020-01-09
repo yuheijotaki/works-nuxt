@@ -2,9 +2,9 @@
   ul
     WorksItem(
       v-for="(post,index) in filterWorks"
-      :item="post"
       :key="index"
-      )
+      :item="post"
+    )
 </template>
 
 <script>
@@ -56,4 +56,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>
