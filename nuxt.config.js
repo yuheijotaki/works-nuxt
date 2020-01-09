@@ -4,7 +4,7 @@ const axios = require('axios')
 const apiURL = 'https://atelier24b.yuheijotaki.com/wp-json/wp/v2/'
 
 export default {
-  mode: 'spa',
+  // mode: 'spa',
   /*
   ** 作業ディレクトリを src/ 以下にまとめる
   ** ref: https://ja.nuxtjs.org/api/configuration-srcdir/
@@ -56,6 +56,22 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  generate: {
+    interval: 1000,
+    routes() {
+      return Promise.all([
+        axios.get(`${apiURL}/wp-json/wp/v2/posts?per_page=100&page=1&_embed=1`)
+      ]).then((data) => {
+        const posts = data[0]
+        return posts.data.map((post) => {
+          return {
+            route: '/work/' + post.slug,
+            payload: post
+          }
+        })
+      })
     }
   },
   // WordPress REST API から情報を取得する
