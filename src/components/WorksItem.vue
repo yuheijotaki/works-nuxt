@@ -1,18 +1,17 @@
-<template>
-  <li>
-    <div>
-      <p><NuxtLink :to="`/work/${item.slug}/`">detail</NuxtLink></p>
-      <p><a :href="item.acf.post_url" target="_blank">website</a></p>
-      <!-- <pre>{{item.id}}</pre> -->
-      <!-- <pre>{{item.slug}}</pre> -->
-      <pre>{{item.title.rendered}}</pre>
-      <pre>{{item.category_name}}</pre>
-      <img :src="item.images.full" alt="">
-      <!-- <pre>{{item.acf.post_color_letter}}</pre> -->
-      <!-- <pre>{{item.acf.post_color_bg}}</pre> -->
-    </div>
-    <hr>
-  </li>
+<template lang="pug">
+  li
+    div
+      p
+        nuxt-link(:to="`/work/${item.slug}/`") detail
+      p
+        a(:href="item.acf.post_url" target="_blank") website
+      pre {{item.id}}
+      pre {{item.slug}}
+      pre {{item.title.rendered}}
+      pre {{item.category_name}}
+      img(:src="item.images.full" alt="")
+      pre {{item.acf.post_color_letter}}
+      pre {{item.acf.post_color_bg}}
 </template>
 
 <script>

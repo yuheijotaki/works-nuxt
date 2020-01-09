@@ -1,14 +1,17 @@
-<template>
-  <div>
-    <p>Filter:</p>
-    <ul>
-      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('All')">All</a></li>
-      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('Front-end')">Front-end</a></li>
-      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('WordPress')">WordPress</a></li>
-      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('Web Design')">Web Design</a></li>
-      <li><a href="javascript:void(0);" @click="clickedCategoryEvent('Tumblr')">Tumblr</a></li>
-    </ul>
-  </div>
+<template lang="pug">
+  div
+    p Filter:
+    ul
+      li
+        a(href="javascript:void(0);" @click="clickedCategoryEvent('All')") All
+      li
+        a(href="javascript:void(0);" @click="clickedCategoryEvent('Front-end')") Front-end
+      li
+        a(href="javascript:void(0);" @click="clickedCategoryEvent('WordPress')") WordPress
+      li
+        a(href="javascript:void(0);" @click="clickedCategoryEvent('Web Design')") Web Design
+      li
+        a(href="javascript:void(0);" @click="clickedCategoryEvent('Tumblr')") Tumblr
 </template>
 
 <script>

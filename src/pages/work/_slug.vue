@@ -1,10 +1,9 @@
-<template>
-  <div>
-    <logo />
-    <WorksSingle
+<template lang="pug">
+  div
+    Logo
+    WorksSingle(
       :post="post"
-    />
-  </div>
+    )
 </template>
 
 <script>

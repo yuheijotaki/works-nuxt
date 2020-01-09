@@ -1,11 +1,10 @@
-<template>
-  <ul>
-    <WorksItem
+<template lang="pug">
+  ul
+    WorksItem(
       v-for="(post,index) in filterWorks"
       :item="post"
       :key="index"
-    />
-  </ul>
+      )
 </template>
 
 <script>

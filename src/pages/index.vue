@@ -1,13 +1,12 @@
-<template>
-  <div>
-    <logo />
-    <Search
+<template lang="pug">
+  div
+    Logo
+    Search(
       @clickedCategory="selectedCategory"
-    />
-    <WorksList
+    )
+    WorksList(
       :filterCategory="propsCategory"
-    />
-  </div>
+    )
 </template>
 
 <script>
