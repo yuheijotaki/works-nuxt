@@ -3,7 +3,7 @@
     p Filter:
     ul
       li
-        a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('All')") All
+        a.navi-category__anchor.is-current(href="javascript:void(0);" @click="clickedCategoryEvent('All')") All
       li
         a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('Front-end')") Front-end
       li
