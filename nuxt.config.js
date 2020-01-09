@@ -1,7 +1,7 @@
 // Nuxt.jsでWordPressの記事を取得する
 // ref: https://www.expexp.jp/nuxt-js-and-wp-netlify/
 const axios = require('axios')
-const apiURL = 'https://atelier24b.yuheijotaki.com/wp-json/wp/v2/'
+const apiURL = 'https://works.yuheijotaki.com/wp-json/wp/v2/'
 
 export default {
   // mode: 'spa',
