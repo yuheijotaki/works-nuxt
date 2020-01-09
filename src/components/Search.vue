@@ -3,15 +3,15 @@
     p Filter:
     ul
       li
-        a(href="javascript:void(0);" @click="clickedCategoryEvent('All')") All
+        a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('All')") All
       li
-        a(href="javascript:void(0);" @click="clickedCategoryEvent('Front-end')") Front-end
+        a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('Front-end')") Front-end
       li
-        a(href="javascript:void(0);" @click="clickedCategoryEvent('WordPress')") WordPress
+        a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('WordPress')") WordPress
       li
-        a(href="javascript:void(0);" @click="clickedCategoryEvent('Web Design')") Web Design
+        a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('Web Design')") Web Design
       li
-        a(href="javascript:void(0);" @click="clickedCategoryEvent('Tumblr')") Tumblr
+        a.navi-category__anchor(href="javascript:void(0);" @click="clickedCategoryEvent('Tumblr')") Tumblr
 </template>
 
 <script>
@@ -22,7 +22,16 @@ export default {
   },
   methods: {
     clickedCategoryEvent(category) {
-      this.$emit('clickedCategory',category);
+      // クリックされたカテゴリーの受け渡し
+      this.$emit('clickedCategory',category)
+      // 現在のカテゴリーのクラス脱着
+      const categoryItem = document.querySelectorAll('.navi-category__anchor')
+      const categoryList = [...categoryItem]
+      categoryList.filter((element) => {
+        element.classList.remove('is-current')
+      });
+      const categoryListCurrent = event.currentTarget
+      categoryListCurrent.classList.add('is-current')
     }
   }
 }
@@ -32,7 +41,15 @@ export default {
 ul {
   display: flex;
 }
-ul li {
-  margin-right: 2em;
+ul {
+  li {
+    margin-right: 2em;
+    a {
+      &.is-current {
+        color: gray;
+        text-decoration: none;
+      }
+    }
+  }
 }
 </style>
