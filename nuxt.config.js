@@ -27,7 +27,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
   ** Global CSS
   */
@@ -47,6 +47,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Build configuration
@@ -57,6 +58,15 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  /*
+  ** customize
+  */
+  styleResources: {
+    scss: [
+      '@/assets/sass/foundation/_config.scss',
+      '@/assets/sass/foundation/_mixin.scss'
+    ]
   },
   generate: {
     interval: 1000,

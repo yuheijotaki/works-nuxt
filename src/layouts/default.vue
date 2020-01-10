@@ -1,16 +1,7 @@
-<template>
-  <div>
-    <nuxt />
-  </div>
+<template lang="pug">
+  div
+    nuxt
 </template>
 
-<style>
-*,html {
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-}
-body {
-  margin: 20px;
-}
+<style lang="scss" scoped>
 </style>
