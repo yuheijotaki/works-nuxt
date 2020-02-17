@@ -3,14 +3,14 @@
 // ===================================
 // color
 // ===================================
-$black_01: #000;
 $white_01: #fff;
+$black_01: #000;
 $gray_01: #ccc;
 
 // ===================================
-// Break Points
+// Break Points (PCファースト)
 // ===================================
-$pcPoint: 1040px; // コンテンツ幅:1000px + padding:20px * 2
+$pcPoint: 1280px;
 $tabletPoint: 768px;
 $spPoint: 480px;
 
@@ -23,6 +23,7 @@ $breakpoints: (
 // ===================================
 // animation
 // ===================================
+
 // easing
 $easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
 $easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);

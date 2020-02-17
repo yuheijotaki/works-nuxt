@@ -31,7 +31,10 @@ export default {
   /*
   ** Global CSS
   */
-  css: ['ress'],
+  css: [
+    'ress',
+    { src: '@/assets/css/styles.scss' }
+  ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -65,7 +68,8 @@ export default {
   styleResources: {
     scss: [
       '@/assets/scss/foundation/_config.scss',
-      '@/assets/scss/foundation/_mixin.scss'
+      '@/assets/scss/foundation/_mixin.scss',
+      '@/assets/scss/layout/_common.scss'
     ]
   },
   generate: {

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $white_01;
+  line-height: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  @include fontSansSerif;
+  @include fontSmooth;
+  @include letterSpace;
+}
