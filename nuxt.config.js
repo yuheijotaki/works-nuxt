@@ -62,10 +62,11 @@ export default {
   /*
   ** customize
   */
+  // .scssファイルをグローバルに読み込む
   styleResources: {
     scss: [
-      '@/assets/sass/foundation/_config.scss',
-      '@/assets/sass/foundation/_mixin.scss'
+      '@/assets/scss/foundation/_config.scss',
+      '@/assets/scss/foundation/_mixin.scss'
     ]
   },
   generate: {
