@@ -51,7 +51,8 @@ li {
 }
 
 .image {
-  width: 160px;
+  max-width: 160px;
+  min-width: 160px;
   margin-right: 20px;
   @include imageItem;
   img {
@@ -68,16 +69,15 @@ li {
 }
 
 .meta {
-  display: flex;
   margin-top: 10px;
   font-size: 14px;
   line-height: 1;
 }
 
 .date {
-  margin-right: 10px;
 }
 
 .category {
+  margin-top: 10px;
 }
 </style>

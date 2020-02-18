@@ -41,6 +41,7 @@ export default {
 div {
   margin-top: 60px;
   display: flex;
+  align-items: center;
 }
 
 ul {
@@ -49,7 +50,7 @@ ul {
 }
 
 p,li {
-  margin-right: 20px;
+  margin-right: 15px;
   font-size: 16px;
   line-height: 1;
 }
@@ -63,8 +64,14 @@ li {
   a {
     color: $black_01;
     text-decoration: none;
+    display: inline-block;
+    padding: 6px 10px;
+    &:hover {
+      background: $gray_01;
+    }
     &.is-current {
-      color: $gray_01;
+      color: $white_01;
+      background: $gray_01;
       text-decoration: none;
     }
   }
