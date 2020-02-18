@@ -38,17 +38,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ul {
+div {
+  margin-top: 60px;
   display: flex;
 }
+
 ul {
-  li {
-    margin-right: 2em;
-    a {
-      &.is-current {
-        color: gray;
-        text-decoration: none;
-      }
+  display: flex;
+  list-style: none;
+}
+
+p,li {
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+p {
+  color: $gray_01;
+}
+
+li {
+  color: $black_01;
+  a {
+    color: $black_01;
+    text-decoration: none;
+    &.is-current {
+      color: $gray_01;
+      text-decoration: none;
     }
   }
 }

@@ -1,23 +1,21 @@
 <template lang="pug">
   li
-    div
-      p
-        nuxt-link(:to="`/work/${item.slug}/`") detail
-      p
-        a(:href="item.acf.post_url" target="_blank") website
-      pre {{item.id}}
-      pre {{item.slug}}
-      pre {{item.title.rendered}}
-      pre {{item.category_name}}
-      img(
-        :src="item.images.full"
-        :alt="item.title.rendered"
-      )
-      pre {{item.acf.post_color_letter}}
-      pre {{item.acf.post_color_bg}}
+    nuxt-link(:to="`/work/${item.slug}/`")
+      p.image
+        img(
+          :src="item.images.full"
+          :alt="item.title.rendered"
+        )
+      div.content
+        p.title {{item.title.rendered}}
+        div.meta
+          p.date {{ item.date | dateFilter }}
+          p.category {{ item.category_name | categoryFilter }}
 </template>
 
 <script>
+import dayjs from 'dayjs'
+
 export default {
   name: 'WorksItem',
   props:{
@@ -25,18 +23,61 @@ export default {
       type: Object,
       default: ''
     }
+  },
+  filters: {
+    dateFilter(value) {
+      return dayjs(value).format('YYYY.MM')
+    },
+    categoryFilter(value) {
+      value = value.split(' ,')
+      return value.join(', ')
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 li {
-  width: 25%;
-  border: #000 1px solid;
-  box-sizing: border-box;
+  width: 48%;
+  margin-top: 30px;
+  &:nth-child(-n+2) {
+    margin-top: 0;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    color: $black_01;
+  }
 }
-img {
-  width: 15px;
-  height: auto;
+
+.image {
+  width: 160px;
+  margin-right: 20px;
+  @include imageItem;
+  img {
+    @include imageObject;
+  }
+}
+
+.content {
+}
+
+.title {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.meta {
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.date {
+  margin-right: 10px;
+}
+
+.category {
 }
 </style>

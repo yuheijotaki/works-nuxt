@@ -57,7 +57,10 @@ export default {
 
 <style lang="scss" scoped>
 ul {
+  margin-top: 60px;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 </style>

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'SingleCaptureSP',
+  name: 'SingleCapture',
   props:{
     'title': {
       type: String,
@@ -23,8 +23,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+li {
+  @include imageItem;
+  margin-top: 30px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 img {
-  width: 15px;
+  @include imageObject;
+  max-width: 800px;
   height: auto;
 }
 </style>

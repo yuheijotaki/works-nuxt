@@ -1,41 +1,36 @@
 <template lang="pug">
   div
-    pre {{post.id}}
-    pre {{post.slug}}
-    pre {{post.title.rendered}}
-    pre {{post.category_name}}
-    pre {{post.acf.post_color_letter}}
-    pre {{post.acf.post_color_bg}}
+    //- pre {{post.acf.post_color_letter}}
+    //- pre {{post.acf.post_color_bg}}
+    p.title {{post.title.rendered}}
+    div.meta
+      p.date Launch: {{ post.date | dateFilter }}
+      p.category Role: {{ post.category_name | categoryFilter }}
+      p.url URL:&nbsp;
+        a(:href="post.acf.post_url" target="_blank") {{post.acf.post_url}}
     ul
-      SingleCapturePC(
+      SingleCapture(
         v-for="(img,index) in capturePC"
         :key="index"
         :title="post.title.rendered"
         :image="img"
       )
-    ul
-      SingleCaptureSP(
-        v-for="(img,index) in captureSP"
-        :key="index"
-        :title="post.title.rendered"
-        :image="img"
-      )
+    p.back
+      nuxt-link(to="/") Index
 </template>
 
 <script>
-import SingleCapturePC from '~/components/SingleCapturePC.vue'
-import SingleCaptureSP from '~/components/SingleCaptureSP.vue'
+import dayjs from 'dayjs'
+import SingleCapture from '~/components/SingleCapture.vue'
 
 export default {
   name: 'WorksSingle',
   components: {
-    SingleCapturePC,
-    SingleCaptureSP
+    SingleCapture
   },
   data () {
     return {
-      capturePC: this.post.acf.post_capture_pc,
-      captureSP: this.post.acf.post_capture_sp
+      capturePC: this.post.acf.post_capture
     }
   },
   props:{
@@ -43,9 +38,56 @@ export default {
       type: Object,
       default: ''
     }
+  },
+  filters: {
+    dateFilter(value) {
+      return dayjs(value).format('YYYY.MM')
+    },
+    categoryFilter(value) {
+      value = value.split(' ,')
+      return value.join(', ')
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+div {
+  margin-top: 60px;
+}
+
+.title {
+  color: $black_01;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.meta {
+  p {
+    margin-top: 15px;
+    color: $black_01;
+    font-size: 16px;
+    line-height: 1;
+    a {
+      color: $black_01;
+      text-decoration: none;
+    }
+  }
+}
+
+ul {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.back {
+  margin-top: 100px;
+  color: $black_01;
+  font-size: 16px;
+  line-height: 1;
+  a {
+    color: $black_01;
+    text-decoration: none;
+  }
+}
 </style>
