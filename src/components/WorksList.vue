@@ -1,10 +1,12 @@
 <template lang="pug">
-  ul
-    WorksItem(
-      v-for="(post,index) in filterWorks"
-      :key="index"
-      :item="post"
-    )
+  div
+    p.loading(v-if="loading") loading...
+    ul
+      WorksItem(
+        v-for="(post,index) in filterWorks"
+        :key="index"
+        :item="post"
+      )
 </template>
 
 <script>
@@ -24,7 +26,8 @@ export default {
   },
   data () {
     return {
-      posts: []
+      posts: [],
+      loading: true
     }
   },
   mounted :function(){
@@ -39,6 +42,7 @@ export default {
         response.data[r] = tmp;
       }
       this.posts = response.data
+      this.loading = false
     })
     .catch( error => {
       console.log(error)
@@ -64,8 +68,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ul {
+div {
   margin-top: 60px;
+}
+
+.loading {
+  color: $black_01;
+  font-size: 16px;
+  line-height: 1;
+  padding: 30px;
+}
+
+ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;

@@ -25,6 +25,7 @@ export default {
 <style lang="scss" scoped>
 li {
   @include imageItem;
+  max-width: 50%;
   margin-top: 30px;
   &:first-child {
     margin-top: 0;

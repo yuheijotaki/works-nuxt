@@ -106,11 +106,11 @@ div {
 }
 
 .works {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .back {
-  margin-top: 100px;
+  margin-top: 60px;
   font-size: 16px;
   line-height: 1;
   a {
