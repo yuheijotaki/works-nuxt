@@ -33,7 +33,7 @@ li {
 
 img {
   @include imageObject;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
 }
 </style>

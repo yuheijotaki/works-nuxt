@@ -42,6 +42,7 @@ div {
   margin-top: 60px;
   display: flex;
   align-items: center;
+  @include indent01;
 }
 
 ul {
@@ -50,13 +51,13 @@ ul {
 }
 
 p,li {
-  margin-right: 15px;
   font-size: 16px;
   line-height: 1;
 }
 
 p {
   color: $gray_01;
+  margin-right: 15px;
 }
 
 li {
@@ -65,7 +66,7 @@ li {
     color: $black_01;
     text-decoration: none;
     display: inline-block;
-    padding: 6px 10px;
+    padding: 10px 15px;
     &:hover {
       background: $gray_01;
     }

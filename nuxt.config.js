@@ -4,7 +4,7 @@ const axios = require('axios')
 const apiURL = 'https://works.yuheijotaki.com'
 
 export default {
-  // mode: 'spa',
+  mode: 'spa',
   /*
   ** 作業ディレクトリを src/ 以下にまとめる
   ** ref: https://ja.nuxtjs.org/api/configuration-srcdir/
@@ -27,7 +27,10 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#000' },
+  loading: {
+    color: 'rgba(120,120,120,.1)',
+    height: '100vh'
+  },
   /*
   ** Global CSS
   */

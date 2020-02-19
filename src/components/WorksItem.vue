@@ -38,15 +38,15 @@ export default {
 
 <style lang="scss" scoped>
 li {
-  width: 48%;
-  margin-top: 30px;
-  &:nth-child(-n+2) {
-    margin-top: 0;
-  }
+  width: 50%;
   a {
     display: flex;
     text-decoration: none;
     color: $black_01;
+    padding: 30px;
+    &:hover {
+      background: $gray_01;
+    }
   }
 }
 
@@ -65,7 +65,7 @@ li {
 
 .title {
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .meta {

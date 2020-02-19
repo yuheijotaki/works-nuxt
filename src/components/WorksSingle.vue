@@ -14,10 +14,9 @@
         :image="img"
       )
     div.works
-      h2 Works
       WorksList
     p.back
-      nuxt-link(to="/") Index
+      nuxt-link(to="/") Back to Index
 </template>
 
 <script>
@@ -72,6 +71,7 @@ div {
   color: $customColor;
   font-size: 32px;
   line-height: 1;
+  @include indent01;
 }
 
 .meta {
@@ -80,9 +80,21 @@ div {
     color: $customColor;
     font-size: 16px;
     line-height: 1;
+    @include indent01;
+    &.url {
+      margin-top: 5px;
+      margin-left: 0;
+      margin-right: 0;
+    }
     a {
       color: $customColor;
       text-decoration: none;
+      display: inline-block;
+      padding: 10px 30px;
+      &:hover {
+        color: $black_01;
+        background: $gray_01;
+      }
     }
   }
 }
@@ -90,25 +102,25 @@ div {
 .capture {
   margin-top: 30px;
   list-style: none;
+  @include indent01;
 }
 
 .works {
-  h2 {
-    color: $customColor;
-    font-size: 24px;
-    line-height: 1;
-    font-weight: normal;
-  }
+  margin-top: 100px;
 }
 
 .back {
   margin-top: 100px;
-  color: $customColor;
   font-size: 16px;
   line-height: 1;
   a {
-    color: $customColor;
+    color: $black_01;
     text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    &:hover {
+      background: $gray_01;
+    }
   }
 }
 </style>

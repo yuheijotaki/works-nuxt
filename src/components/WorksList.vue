@@ -30,6 +30,14 @@ export default {
   mounted :function(){
     axios.get( 'https://works.yuheijotaki.com/wp-json/wp/v2/posts?per_page=100' )
     .then( response => {
+      // 配列をシャッフル
+      // ref: https://qiita.com/komaji504/items/62a0f8ea43053e90555a
+      for(var i = response.data.length - 1; i > 0; i--){
+        var r = Math.floor(Math.random() * (i + 1));
+        var tmp = response.data[i];
+        response.data[i] = response.data[r];
+        response.data[r] = tmp;
+      }
       this.posts = response.data
     })
     .catch( error => {

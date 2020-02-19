@@ -1,7 +1,6 @@
 <template lang="pug">
   h1
-    nuxt-link(to="/") works
-      span .yuheijotaki.com
+    nuxt-link(to="/") works.yuheijotaki.com
 </template>
 
 <style lang="scss" scoped>
@@ -14,9 +13,10 @@ h1 {
 a {
   color: $black_01;
   text-decoration: none;
-}
-
-span {
-  color: $gray_01;
+  display: inline-block;
+  padding: 15px 30px;
+  &:hover {
+    background: $gray_01;
+  }
 }
 </style>
