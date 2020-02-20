@@ -43,6 +43,9 @@ div {
   display: flex;
   align-items: center;
   @include indent01;
+  @include mq {
+    margin-top: 30px;
+  }
 }
 
 ul {
@@ -51,24 +54,39 @@ ul {
 }
 
 p,li {
-  font-size: 16px;
   line-height: 1;
+  @include fontMedium;
 }
 
 p {
   color: $gray_01;
   margin-right: 15px;
+  @include mq {
+    display: none;
+  }
 }
 
 li {
   color: $black_01;
+  @include mq {
+    font-size: 12px;
+  }
+  @include mq(spMin) {
+    font-size: 11px;
+  }
   a {
     color: $black_01;
     text-decoration: none;
     display: inline-block;
     padding: 10px 15px;
+    @include mq {
+      padding: 5px 6px;
+    }
     &:hover {
       background: $gray_01;
+      @include mq {
+        background: none;
+      }
     }
     &.is-current {
       color: $white_01;

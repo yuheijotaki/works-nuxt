@@ -13,17 +13,18 @@ $gray_01: #ccc;
 $pcPoint: 1280px;
 $tabletPoint: 1024px;
 $spPoint: 480px;
+$spMinPoint: 374px;
 
 $breakpoints: (
   'pc': 'screen and (max-width: #{$pcPoint})',
   'tb': 'screen and (max-width: #{$tabletPoint})',
-  'sp': 'screen and (max-width: #{$spPoint})'
+  'sp': 'screen and (max-width: #{$spPoint})',
+  'spMin': 'screen and (max-width: #{$spMinPoint})'
 ) !default;
 
 // ===================================
 // animation
 // ===================================
-
 // easing
 $easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
 $easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);

@@ -30,6 +30,9 @@ li {
   &:first-child {
     margin-top: 0;
   }
+  @include mq {
+    max-width: 300px;
+  }
 }
 
 img {

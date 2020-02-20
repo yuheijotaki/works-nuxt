@@ -43,22 +43,30 @@
 // ===================================
 // indent
 // ===================================
+@mixin indentReset {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @mixin indent01 {
   margin-left: 30px;
   margin-right: 30px;
   @include mq {
+    @include indentReset;
   }
 }
 @mixin indent02 {
   margin-left: 20px;
   margin-right: 20px;
   @include mq {
+    @include indentReset;
   }
 }
 @mixin indent03 {
   margin-left: 15px;
   margin-right: 15px;
   @include mq {
+    @include indentReset;
   }
 }
 
@@ -88,6 +96,31 @@
 // ===================================
 // font settings
 // ===================================
+@mixin fontExLarge {
+  font-size: 32px;
+  @include mq {
+    font-size: 24px;
+  }
+}
+@mixin fontLarge {
+  font-size: 24px;
+  @include mq {
+    font-size: 18px;
+  }
+}
+@mixin fontMedium {
+  font-size: 16px;
+  @include mq {
+    font-size: 14px;
+  }
+}
+@mixin fontSmall {
+  font-size: 14px;
+  @include mq {
+    font-size: 12px;
+  }
+}
+
 // letter-spacing
 @mixin ls015 {
   letter-spacing: .015em;

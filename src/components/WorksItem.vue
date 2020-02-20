@@ -39,6 +39,13 @@ export default {
 <style lang="scss" scoped>
 li {
   width: 50%;
+  @include mq {
+    width: 100%;
+    margin-top: 30px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
   a {
     display: flex;
     text-decoration: none;
@@ -46,6 +53,12 @@ li {
     padding: 30px;
     &:hover {
       background: $gray_01;
+      @include mq {
+        background: none;
+      }
+    }
+    @include mq {
+      padding: 0;
     }
   }
 }
@@ -55,6 +68,11 @@ li {
   min-width: 160px;
   margin-right: 20px;
   @include imageItem;
+  @include mq {
+    max-width: 100px;
+    min-width: 100px;
+    margin-right: 15px;
+  }
   img {
     @include imageObject;
   }
@@ -64,14 +82,17 @@ li {
 }
 
 .title {
-  font-size: 24px;
   line-height: 1.2;
+  @include fontLarge;
 }
 
 .meta {
   margin-top: 10px;
-  font-size: 14px;
   line-height: 1;
+  @include fontSmall;
+  @include mq {
+    margin-top: 5px;
+  }
 }
 
 .date {
@@ -79,5 +100,8 @@ li {
 
 .category {
   margin-top: 10px;
+  @include mq {
+    display: none;
+  }
 }
 </style>

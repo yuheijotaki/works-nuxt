@@ -70,13 +70,19 @@ export default {
 <style lang="scss" scoped>
 div {
   margin-top: 60px;
+  @include mq {
+    margin-top: 40px;
+  }
 }
 
 .loading {
   color: $black_01;
-  font-size: 16px;
   line-height: 1;
   padding: 30px;
+  @include fontMedium;
+  @include mq {
+    padding: 0;
+  }
 }
 
 ul {

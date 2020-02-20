@@ -5,9 +5,9 @@
 
 <style lang="scss" scoped>
 h1 {
-  font-size: 24px;
   line-height: 1;
   font-weight: normal;
+  @include fontLarge;
 }
 
 a {
@@ -17,6 +17,12 @@ a {
   padding: 15px 30px;
   &:hover {
     background: $gray_01;
+    @include mq {
+      background: none;
+    }
+  }
+  @include mq {
+    padding: 0;
   }
 }
 </style>

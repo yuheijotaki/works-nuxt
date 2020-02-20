@@ -65,12 +65,15 @@ $customColor: var(--user-color);
 
 div {
   margin-top: 60px;
+  @include mq {
+    margin-top: 30px;
+  }
 }
 
 .title {
   color: $customColor;
-  font-size: 32px;
-  line-height: 1;
+  line-height: 1.2;
+  @include fontExLarge;
   @include indent01;
 }
 
@@ -78,22 +81,35 @@ div {
   p {
     margin-top: 15px;
     color: $customColor;
-    font-size: 16px;
     line-height: 1;
+    @include fontMedium;
     @include indent01;
+    @include mq {
+      margin-top: 10px;
+    }
     &.url {
       margin-top: 5px;
       margin-left: 0;
       margin-right: 0;
+      @include mq {
+        margin-top: 10px;
+      }
     }
     a {
       color: $customColor;
       text-decoration: none;
       display: inline-block;
       padding: 10px 30px;
+      @include mq {
+        padding: 0;
+      }
       &:hover {
         color: $black_01;
         background: $gray_01;
+        @include mq {
+          color: $customColor;
+          background: none;
+        }
       }
     }
   }
@@ -107,19 +123,28 @@ div {
 
 .works {
   margin-top: 120px;
+  @include mq {
+    margin-top: 90px;
+  }
 }
 
 .back {
   margin-top: 60px;
-  font-size: 16px;
   line-height: 1;
+  @include fontMedium;
   a {
     color: $black_01;
     text-decoration: none;
     display: inline-block;
     padding: 10px 30px;
+    @include mq {
+      padding: 0;
+    }
     &:hover {
       background: $gray_01;
+      @include mq {
+        background: none;
+      }
     }
   }
 }
