@@ -124,7 +124,7 @@ div {
 .works {
   margin-top: 120px;
   @include mq {
-    margin-top: 90px;
+    margin-top: 70px;
   }
 }
 

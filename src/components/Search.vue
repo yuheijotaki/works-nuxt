@@ -69,7 +69,7 @@ p {
 li {
   color: $black_01;
   @include mq {
-    font-size: 12px;
+    font-size: 13px;
   }
   @include mq(spMin) {
     font-size: 11px;
@@ -80,6 +80,9 @@ li {
     display: inline-block;
     padding: 10px 15px;
     @include mq {
+      padding: 6px 8px;
+    }
+    @include mq(spMin) {
       padding: 5px 6px;
     }
     &:hover {
