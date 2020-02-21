@@ -1,6 +1,8 @@
 <template lang="pug">
   div
-    Logo
+    Logo(
+      @clickedLogo="selectedLogo"
+    )
     Search(
       @clickedCategory="selectedCategory"
     )
@@ -26,8 +28,12 @@ export default {
     }
   },
   methods: {
+    // ロゴクリック時
+    selectedLogo () {
+      this.category = 'All'
+    },
+    // カテゴリークリック時
     selectedCategory (category) {
-      // console.log(category)
       this.category = category
     }
   },
