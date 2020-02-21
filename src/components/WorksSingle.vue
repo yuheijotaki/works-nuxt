@@ -1,18 +1,19 @@
 <template lang="pug">
   div(:style="customStyle")
-    p.title {{post.title.rendered}}
-    div.meta
-      p.date {{ post.date | dateFilter }}
-      p.category {{ post.category_name | categoryFilter }}
-      p.url
-        a(:href="post.acf.post_url" target="_blank") {{post.acf.post_url}}
-    ul.capture
-      SingleCapture(
-        v-for="(img,index) in capturePC"
-        :key="index"
-        :title="post.title.rendered"
-        :image="img"
-      )
+    section
+      h2.title {{post.title.rendered}}
+      div.meta
+        p.date {{ post.date | dateFilter }}
+        p.category {{ post.category_name | categoryFilter }}
+        p.url
+          a(:href="post.acf.post_url" target="_blank") {{post.acf.post_url}}
+      ul.capture
+        SingleCapture(
+          v-for="(img,index) in capturePC"
+          :key="index"
+          :title="post.title.rendered"
+          :image="img"
+        )
     div.works
       WorksList
     p.back
@@ -63,6 +64,7 @@ export default {
 <style lang="scss" scoped>
 $customColor: var(--user-color);
 
+section,
 div {
   margin-top: 60px;
   @include mq {
@@ -72,6 +74,7 @@ div {
 
 .title {
   color: $customColor;
+  font-weight: normal;
   line-height: 1.2;
   @include fontExLarge;
   @include indent01;

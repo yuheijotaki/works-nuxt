@@ -6,8 +6,8 @@
           :src="item.images.full"
           :alt="item.title.rendered"
         )
-      div.content
-        p.title {{item.title.rendered}}
+      section.content
+        h3.title {{item.title.rendered}}
         div.meta
           p.date {{ item.date | dateFilter }}
           p.category {{ item.category_name | categoryFilter }}
@@ -83,6 +83,7 @@ li {
 
 .title {
   line-height: 1.2;
+  font-weight: normal;
   @include fontLarge;
 }
 

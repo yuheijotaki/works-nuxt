@@ -1,6 +1,6 @@
 <template lang="pug">
-  div
-    p Filter:
+  section
+    h2 Filter:
     ul
       li
         a.navi-category__anchor.is-current(href="javascript:void(0);" @click="clickedCategoryEvent('All')") All
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+section {
   margin-top: 60px;
   display: flex;
   align-items: center;
@@ -53,13 +53,14 @@ ul {
   list-style: none;
 }
 
-p,li {
+h2,li {
   line-height: 1;
   @include fontMedium;
 }
 
-p {
+h2 {
   color: $gray_01;
+  font-weight: normal;
   margin-right: 15px;
   @include mq {
     display: none;

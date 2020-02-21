@@ -15,3 +15,8 @@ body {
     @include ls015;
   }
 }
+
+.u-hide-title {
+  font-size: 0;
+  line-height: 0;
+}

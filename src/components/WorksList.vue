@@ -1,5 +1,6 @@
 <template lang="pug">
-  div
+  section
+    h2.u-hide-title Works
     p.loading(v-if="loading") loading...
     ul
       WorksItem(
@@ -68,7 +69,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+section {
   margin-top: 60px;
   @include mq {
     margin-top: 40px;
