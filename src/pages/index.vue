@@ -41,6 +41,12 @@ export default {
     propsCategory: function() {
       return this.category
     }
+  },
+  head () {
+    return {
+      titleTemplate: null,
+      title: 'Works',
+    }
   }
 }
 </script>

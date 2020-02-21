@@ -1,7 +1,7 @@
 {
   "name": "works-nuxt",
   "version": "1.0.0",
-  "description": "My extraordinary Nuxt.js project",
+  "description": "My Nuxt.js project with WordPress as Headless CMS",
   "author": "Yuhei Jotaki",
   "private": true,
   "scripts": {

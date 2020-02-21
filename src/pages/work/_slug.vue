@@ -18,13 +18,35 @@ export default {
   },
   data () {
     return {
-      post: {}
+      post: {},
+      meta: {
+        title: '',
+        type: 'article',
+        url: ''
+      }
     }
   },
   async asyncData( { params } ) {
     const { data } = await axios.get('https://works.yuheijotaki.com/wp-json/wp/v2/posts?slug=' + params.slug)
     return {
-      post: data[0]
+      post: data[0],
+      meta: {
+        title: data[0].title.rendered,
+        url: `https://works-yuheijotaki.netlify.com/${data[0].slug}/`
+      }
+    }
+  },
+  head () {
+    return {
+      title: this.meta.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.meta.description },
+        { hid: 'og:type', property: 'og:type', content: this.meta.type },
+        { hid: 'og:url', property: 'og:url', content: this.meta.url },
+        { hid: 'og:title', property: 'og:title', content: `${this.meta.title} | Works` },
+        { hid: 'twitter:url', property: 'twitter:url', content: this.meta.url },
+        { hid: 'twitter:title', property: 'twitter:title', content: `${this.meta.title} | Works` }
+      ]
     }
   }
 }
