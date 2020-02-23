@@ -5,8 +5,15 @@
       div.meta
         p.date {{ post.date | dateFilter }}
         p.category {{ post.category_name | categoryFilter }}
-        p.url
-          a(:href="post.acf.post_url" target="_blank") {{post.acf.post_url}}
+        template(v-if="post.acf.post_notAvailable")
+          p.url
+            span <s>&nbsp;{{post.acf.post_url}}&nbsp;</s> &nbsp;(not available)
+        template(v-else)
+          p.url
+            a(:href="post.acf.post_url" target="_blank") {{post.acf.post_url}}
+              span(v-if="post.acf.post_archive") &nbsp;(archive)
+      div.credit(v-if="post.acf.post_credit")
+        p(v-html="post.acf.post_credit")
       ul.capture
         SingleCapture(
           v-for="(img,index) in capturePC"
@@ -109,17 +116,47 @@ div {
       &:hover {
         color: $black_01;
         background: $gray_01;
+        span {
+          color: $black_01;
+        }
         @include mq {
           color: $customColor;
           background: none;
+          span {
+           color: $customColor;
+          }
         }
+      }
+      span {
+        color: $customColor;
+        display: inline;
+        padding: 0;
+      }
+    }
+    span {
+      color: $customColor;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 30px;
+      @include mq {
+        padding: 0;
       }
     }
   }
 }
 
-.capture {
+.credit {
   margin-top: 30px;
+  @include indent01;
+  p {
+    color: $customColor;
+    line-height: 1.7;
+    @include fontMedium;
+  }
+}
+
+.capture {
+  margin-top: 50px;
   list-style: none;
   @include indent01;
 }
