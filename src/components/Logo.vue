@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     h1
-      nuxt-link(to="/" @click.native="clickedLogoEvent") works-yuheijotaki.netlify.com
+      nuxt-link(to="/" @click.native="clickedLogoEvent") works.yuheijotaki.com
 </template>
 
 <script>

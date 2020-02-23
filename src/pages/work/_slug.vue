@@ -27,7 +27,7 @@ export default {
     }
   },
   async asyncData( { params } ) {
-    const { data } = await axios.get('https://works.yuheijotaki.com/wp-json/wp/v2/posts?slug=' + params.slug)
+    const { data } = await axios.get('https://works-wp.yuheijotaki.com/wp-json/wp/v2/posts?slug=' + params.slug)
     return {
       post: data[0],
       meta: {
