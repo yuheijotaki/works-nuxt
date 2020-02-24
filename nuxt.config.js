@@ -6,7 +6,7 @@ const apiURL = 'https://works-wp.yuheijotaki.com'
 // meta設定
 const title = 'Works'
 const description = 'My Nuxt.js project with WordPress as Headless CMS'
-const url = 'https://works-yuheijotaki.netlify.com'
+const url = 'https://works.yuheijotaki.com'
 const ogImage = `${url}/assets/img/ogp.png`
 
 export default {
@@ -76,7 +76,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -113,6 +114,23 @@ export default {
           }
         })
       })
+    }
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://works.yuheijotaki.com',
+    // exclude: [
+      // '/admin'
+    // ],
+    routes(callback) {
+      axios.get('https://works-wp.yuheijotaki.com/wp-json/wp/v2/posts?per_page=100&page=1&_embed=1')
+        .then((res) => {
+          var routes = res.data.map((post) => {
+            return '/work/' + post.slug
+          })
+          callback(null, routes)
+        })
+        .catch(callback)
     }
   },
   // WordPress REST API から情報を取得する

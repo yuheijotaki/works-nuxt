@@ -32,7 +32,7 @@ export default {
       post: data[0],
       meta: {
         title: data[0].title.rendered,
-        url: `https://works-yuheijotaki.netlify.com/${data[0].slug}/`
+        url: `https://works.yuheijotaki.com/${data[0].slug}/`
       }
     }
   },
