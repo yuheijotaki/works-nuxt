@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted :function(){
-    axios.get( 'https://works-wp.yuheijotaki.com/wp-json/wp/v2/posts?per_page=100' )
+    axios.get( `${process.env.API_URL}posts?per_page=100` )
     .then( response => {
       // 配列をシャッフル
       // ref: https://qiita.com/komaji504/items/62a0f8ea43053e90555a

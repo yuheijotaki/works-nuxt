@@ -27,12 +27,12 @@ export default {
     }
   },
   async asyncData( { params } ) {
-    const { data } = await axios.get('https://works-wp.yuheijotaki.com/wp-json/wp/v2/posts?slug=' + params.slug)
+    const { data } = await axios.get(`${process.env.API_URL}posts?slug=${params.slug}`)
     return {
       post: data[0],
       meta: {
         title: data[0].title.rendered,
-        url: `https://works.yuheijotaki.com/${data[0].slug}/`
+        url: `${process.env.SITE_URL}/${data[0].slug}/`
       }
     }
   },
