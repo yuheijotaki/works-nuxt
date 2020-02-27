@@ -1,27 +1,42 @@
 # Nuxt.js + WordPress のポートフォリオサイト
 
+- [概要](#概要)
+- [URL](#URL)
+- [構成](#構成)
+- [使用サービス・技術](#使用サービス・技術)
+- [使用モジュール](#使用モジュール)
+- [ディレクトリ構成](#ディレクトリ構成)
+- [ブログ](#ブログ)
+- [コマンド](#コマンド)
+- [ステータス](#ステータス)
+
+
+
+<a name="概要"></a>
 ## 概要
 
 ポートフォリオサイトをNuxt.js と WordPress（WP REST API）を使用して再構築しました。
 
 
 
+<a name="URL"></a>
 ## URL
 
-フロントエンド：
+- フロントエンド：
 [https://works.yuheijotaki.dev/](https://works.yuheijotaki.dev/)
-
-バックエンド（CMS）：
+- バックエンド（CMS）：
 [https://works-wp.yuheijotaki.com/](https://works-wp.yuheijotaki.com/) のWordPress管理画面
 
 
 
+<a name="構成"></a>
 ## 構成
 
 ![構成](https://raw.githubusercontent.com/yuheijotaki/works-nuxt/master/docs/img/service.png)
 
 
 
+<a name="使用サービス・技術"></a>
 ## 使用サービス・技術
 
 - [Nuxt.js](https://ja.nuxtjs.org/)（フロントエンド）
@@ -33,6 +48,7 @@
 
 
 
+<a name="使用モジュール"></a>
 ## 使用モジュール
 
 - [axios](https://github.com/axios/axios)（API連携）
@@ -45,6 +61,7 @@
 
 
 
+<a name="ディレクトリ構成"></a>
 ## ディレクトリ構成
 
 ```
@@ -75,6 +92,7 @@
 
 
 
+<a name="ブログ"></a>
 ## ブログ
 
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その1](https://jtk.hatenablog.com/entry/2020/01/07/220000)
@@ -92,6 +110,7 @@
 
 
 
+<a name="コマンド"></a>
 ## コマンド
 
 ``` bash
@@ -110,5 +129,6 @@ $ npm run generate
 ```
 
 
+<a name="ステータス"></a>
 ## ステータス
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bf61e538-301d-4d6f-aa38-e78d736c1b35/deploy-status)](https://app.netlify.com/sites/works-yuheijotaki/deploys)
