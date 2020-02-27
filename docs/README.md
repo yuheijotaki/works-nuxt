@@ -2,6 +2,8 @@
 
 ## URL
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf61e538-301d-4d6f-aa38-e78d736c1b35/deploy-status)](https://app.netlify.com/sites/works-yuheijotaki/deploys)
+
 [https://works.yuheijotaki.dev/](https://works.yuheijotaki.dev/)
 
 
