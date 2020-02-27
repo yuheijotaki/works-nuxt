@@ -25,13 +25,13 @@ export default {
 <style lang="scss" scoped>
 li {
   @include imageItem;
-  max-width: 50%;
+  max-width: 500px;
   margin-top: 30px;
   &:first-child {
     margin-top: 0;
   }
   @include mq {
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 

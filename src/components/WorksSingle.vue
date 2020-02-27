@@ -101,6 +101,8 @@ div {
       margin-top: 5px;
       margin-left: 0;
       margin-right: 0;
+      line-height: 1.4;
+      @include enTextBr;
       @include mq {
         margin-top: 10px;
       }
