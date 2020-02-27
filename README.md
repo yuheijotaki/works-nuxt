@@ -6,9 +6,9 @@
 - [使用サービス・技術](#使用サービス・技術)
 - [使用モジュール](#使用モジュール)
 - [ディレクトリ構成](#ディレクトリ構成)
-- [ブログ](#ブログ)
 - [コマンド](#コマンド)
 - [ステータス](#ステータス)
+- [ブログ](#ブログ)
 
 
 
@@ -92,24 +92,6 @@
 
 
 
-<a name="ブログ"></a>
-## ブログ
-
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その1](https://jtk.hatenablog.com/entry/2020/01/07/220000)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その2](https://jtk.hatenablog.com/entry/2020/01/08/220000)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その3](https://jtk.hatenablog.com/entry/2020/01/09/084609)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その4](https://jtk.hatenablog.com/entry/2020/01/09/202100)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その5](https://jtk.hatenablog.com/entry/2020/01/15/200000)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その6](https://jtk.hatenablog.com/entry/2020/02/17/094713)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その7](https://jtk.hatenablog.com/entry/2020/02/18/101549)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その8](https://jtk.hatenablog.com/entry/2020/02/18/180847)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その9](https://jtk.hatenablog.com/entry/2020/02/20/101523)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その10](https://jtk.hatenablog.com/entry/2020/02/21/121515)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その11](https://jtk.hatenablog.com/entry/2020/02/25/091534)
-- [WordPress + Nuxt.js でポートフォリオサイトを作る その12](https://jtk.hatenablog.com/entry/2020/02/26/102122)
-
-
-
 <a name="コマンド"></a>
 ## コマンド
 
@@ -132,3 +114,21 @@ $ npm run generate
 <a name="ステータス"></a>
 ## ステータス
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bf61e538-301d-4d6f-aa38-e78d736c1b35/deploy-status)](https://app.netlify.com/sites/works-yuheijotaki/deploys)
+
+
+
+<a name="ブログ"></a>
+## ブログ
+
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その1](https://jtk.hatenablog.com/entry/2020/01/07/220000)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その2](https://jtk.hatenablog.com/entry/2020/01/08/220000)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その3](https://jtk.hatenablog.com/entry/2020/01/09/084609)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その4](https://jtk.hatenablog.com/entry/2020/01/09/202100)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その5](https://jtk.hatenablog.com/entry/2020/01/15/200000)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その6](https://jtk.hatenablog.com/entry/2020/02/17/094713)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その7](https://jtk.hatenablog.com/entry/2020/02/18/101549)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その8](https://jtk.hatenablog.com/entry/2020/02/18/180847)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その9](https://jtk.hatenablog.com/entry/2020/02/20/101523)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その10](https://jtk.hatenablog.com/entry/2020/02/21/121515)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その11](https://jtk.hatenablog.com/entry/2020/02/25/091534)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その12](https://jtk.hatenablog.com/entry/2020/02/26/102122)
