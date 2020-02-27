@@ -16,6 +16,12 @@
 
 
 
+## 構成
+
+![構成](https://raw.githubusercontent.com/yuheijotaki/works-nuxt/master/docs/img/service.png)
+
+
+
 ## 使用サービス・技術
 
 - [Nuxt.js](https://ja.nuxtjs.org/)（フロントエンド）
@@ -36,12 +42,6 @@
 - [dotenv-module](https://github.com/nuxt-community/dotenv-module)（環境変数）
 - [analytics-module](https://github.com/nuxt-community/analytics-module)（Google Analytics）
 - [sitemap-module](https://github.com/nuxt-community/sitemap-module)（sitemap.xml）
-
-
-
-## 構成
-
-![構成](https://raw.githubusercontent.com/yuheijotaki/works-nuxt/master/docs/img/service.png)
 
 
 
