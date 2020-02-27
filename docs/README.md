@@ -8,7 +8,6 @@
 - [WordPress](https://ja.wordpress.org/)（CMS）
   - [JAMstack Deployments](https://ja.wordpress.org/plugins/wp-jamstack-deployments/)（Netlifyへの自動デプロイプラグイン）
 - [WP REST API](https://ja.wp-api.org/)（API）
-  - 
 - [GitHub](https://github.com/yuheijotaki/works-nuxt)（Gitリポジトリ）
 - [Netlify](https://www.netlify.com/)（ホスティングサーバー）
 
@@ -16,13 +15,13 @@
 
 ## 使用モジュール
 
-- [axios](https://github.com/axios/axios)
-- [pug-loader](https://github.com/pugjs/pug-loader)
-- [ress](https://github.com/filipelinhares/ress)
-- [style-resources-module](https://github.com/nuxt-community/style-resources-module)
-- [dotenv-module](https://github.com/nuxt-community/dotenv-module)
-- [analytics-module](https://github.com/nuxt-community/analytics-module)
-- [sitemap-module](https://github.com/nuxt-community/sitemap-module)
+- [axios](https://github.com/axios/axios)（API連携）
+- [pug-loader](https://github.com/pugjs/pug-loader)（HTMLテンプレートエンジン）
+- [ress](https://github.com/filipelinhares/ress)（リセットCSS）
+- [style-resources-module](https://github.com/nuxt-community/style-resources-module)（.scss使用）
+- [dotenv-module](https://github.com/nuxt-community/dotenv-module)（環境変数）
+- [analytics-module](https://github.com/nuxt-community/analytics-module)（Google Analytics）
+- [sitemap-module](https://github.com/nuxt-community/sitemap-module)（sitemap.xml）
 
 
 
