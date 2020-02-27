@@ -1,10 +1,18 @@
 # Nuxt.js + WordPress のポートフォリオサイト
 
+## 概要
+
+ポートフォリオサイトをNuxt.js と WordPress（WP REST API）を使用して再構築しました。
+
+
+
 ## URL
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bf61e538-301d-4d6f-aa38-e78d736c1b35/deploy-status)](https://app.netlify.com/sites/works-yuheijotaki/deploys)
-
+フロントエンド：
 [https://works.yuheijotaki.dev/](https://works.yuheijotaki.dev/)
+
+バックエンド（CMS）：
+[https://works-wp.yuheijotaki.com/](https://works-wp.yuheijotaki.com/) のWordPress管理画面
 
 
 
@@ -81,3 +89,8 @@
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その10](https://jtk.hatenablog.com/entry/2020/02/21/121515)
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その11](https://jtk.hatenablog.com/entry/2020/02/25/091534)
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その12](https://jtk.hatenablog.com/entry/2020/02/26/102122)
+
+
+
+## ステータス
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf61e538-301d-4d6f-aa38-e78d736c1b35/deploy-status)](https://app.netlify.com/sites/works-yuheijotaki/deploys)
