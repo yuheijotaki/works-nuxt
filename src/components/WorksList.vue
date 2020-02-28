@@ -7,6 +7,7 @@
         v-for="(post,index) in filterWorks"
         :key="index"
         :item="post"
+        :postId="postId"
       )
 </template>
 
@@ -23,6 +24,10 @@ export default {
     'filterCategory': {
       type: String,
       default: 'All'
+    },
+    'postId': {
+      type: Number,
+      default: 0,
     }
   },
   data () {
@@ -36,12 +41,12 @@ export default {
     .then( response => {
       // 配列をシャッフル
       // ref: https://qiita.com/komaji504/items/62a0f8ea43053e90555a
-      for(var i = response.data.length - 1; i > 0; i--){
-        var r = Math.floor(Math.random() * (i + 1));
-        var tmp = response.data[i];
-        response.data[i] = response.data[r];
-        response.data[r] = tmp;
-      }
+      // for(var i = response.data.length - 1; i > 0; i--){
+      //   var r = Math.floor(Math.random() * (i + 1));
+      //   var tmp = response.data[i];
+      //   response.data[i] = response.data[r];
+      //   response.data[r] = tmp;
+      // }
       this.posts = response.data
       this.loading = false
     })

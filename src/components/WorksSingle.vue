@@ -22,7 +22,9 @@
           :image="img"
         )
     div.works
-      WorksList
+      WorksList(
+        :postId="post.id"
+      )
     p.back
       nuxt-link(to="/") Back to Index
 </template>

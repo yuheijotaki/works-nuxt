@@ -1,16 +1,29 @@
 <template lang="pug">
   li
-    nuxt-link(:to="`/work/${item.slug}/`")
-      p.image
-        img(
-          :src="item.images.full"
-          :alt="item.title.rendered"
-        )
-      section.content
-        h3.title {{item.title.rendered}}
-        div.meta
-          p.date {{ item.date | dateFilter }}
-          p.category {{ item.category_name | categoryFilter }}
+    template(v-if="postId === item.id")
+      span.anchor
+        p.image
+          img(
+            :src="item.images.full"
+            :alt="item.title.rendered"
+          )
+        section.content
+          h3.title {{item.title.rendered}}
+          div.meta
+            p.date {{ item.date | dateFilter }}
+            p.category {{ item.category_name | categoryFilter }}
+    template(v-else)
+      nuxt-link(class="anchor" :to="`/work/${item.slug}/`")
+        p.image
+          img(
+            :src="item.images.full"
+            :alt="item.title.rendered"
+          )
+        section.content
+          h3.title {{item.title.rendered}}
+          div.meta
+            p.date {{ item.date | dateFilter }}
+            p.category {{ item.category_name | categoryFilter }}
 </template>
 
 <script>
@@ -22,6 +35,10 @@ export default {
     'item': {
       type: Object,
       default: ''
+    },
+    'postId': {
+      type: Number,
+      default: 0,
     }
   },
   filters: {
@@ -46,21 +63,27 @@ li {
       margin-top: 0;
     }
   }
-  a {
-    display: flex;
-    text-decoration: none;
-    color: $black_01;
-    padding: 30px;
-    &:hover {
-      background: $gray_01;
-      @include mq {
-        background: none;
-      }
-    }
+}
+
+.anchor {
+  display: flex;
+  text-decoration: none;
+  padding: 30px;
+  @include mq {
+    padding: 0;
+  }
+}
+a.anchor {
+  color: $black_01;
+  &:hover {
+    background: $gray_01;
     @include mq {
-      padding: 0;
+      background: none;
     }
   }
+}
+span.anchor {
+  opacity: .25;
 }
 
 .image {
