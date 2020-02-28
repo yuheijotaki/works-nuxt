@@ -45,7 +45,7 @@ export default {
   head () {
     return {
       titleTemplate: null,
-      title: 'Works',
+      title: 'works.yuheijotaki.dev'
     }
   }
 }

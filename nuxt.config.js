@@ -8,8 +8,8 @@ const axios = require('axios')
 const apiURL = process.env.API_URL
 
 // meta設定
-const siteTitle = 'Works'
-const siteDescription = 'My Nuxt.js project with WordPress as Headless CMS'
+const siteTitle = 'works.yuheijotaki.dev'
+const siteDescription = 'yuheijotaki Portfolio Website'
 const siteUrl = process.env.SITE_URL
 const ogImage = `${siteUrl}/assets/img/ogp.png`
 
@@ -28,22 +28,22 @@ export default {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | Works',
+    titleTemplate: '%s | works.yuheijotaki.dev',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: siteDescription },
       { property: 'og:image', content: ogImage },
       { property: 'og:site_name', content: siteTitle },
-      { property: 'og:description', content: siteDescription },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: siteUrl },
       { hid: 'og:title', property: 'og:title', content: siteTitle },
+      { hid: 'og:description', property: 'og:description', content: siteDescription },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:image:src', content: ogImage },
-      { name: 'twitter:description', content: siteDescription },
       { hid: 'twitter:url', name: 'twitter:url', content: siteUrl },
-      { hid: 'twitter:title', name: 'twitter:title', content: siteTitle }
+      { hid: 'twitter:title', name: 'twitter:title', content: siteTitle },
+      { hid: 'twitter:description', name: 'twitter:description', content: siteDescription }
     ],
     // link要素で外部リソースを読み込みたいとき
     link: [

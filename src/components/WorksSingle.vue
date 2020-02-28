@@ -10,7 +10,7 @@
             span <s>&nbsp;{{post.acf.post_url}}&nbsp;</s> &nbsp;(not available)
         template(v-else)
           p.url
-            a(:href="post.acf.post_url" target="_blank") {{post.acf.post_url}}
+            a(:href="post.acf.post_url" target="_blank" rel="noopener") {{post.acf.post_url}}
               span(v-if="post.acf.post_archive") &nbsp;(archive)
       div.credit(v-if="post.acf.post_credit")
         p(v-html="post.acf.post_credit")
