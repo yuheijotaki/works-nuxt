@@ -132,3 +132,4 @@ $ npm run generate
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その10](https://jtk.hatenablog.com/entry/2020/02/21/121515)
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その11](https://jtk.hatenablog.com/entry/2020/02/25/091534)
 - [WordPress + Nuxt.js でポートフォリオサイトを作る その12](https://jtk.hatenablog.com/entry/2020/02/26/102122)
+- [WordPress + Nuxt.js でポートフォリオサイトを作る その13](https://jtk.hatenablog.com/entry/2020/02/28/102822)
