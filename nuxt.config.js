@@ -55,7 +55,7 @@ export default {
   ** Customize the progress-bar color
   */
   loading: {
-    color: 'rgba(0,0,0,.1)',
+    color: 'rgba(0,0,0,.15)',
     height: '100vh'
   },
   /*
