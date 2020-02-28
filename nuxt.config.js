@@ -26,6 +26,7 @@ export default {
   */
   head: {
     htmlAttrs: {
+      lang: 'ja',
       prefix: 'og: http://ogp.me/ns#'
     },
     titleTemplate: '%s | works.yuheijotaki.dev',
